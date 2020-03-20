@@ -1,16 +1,14 @@
-# First startup
-Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.
-
+# First startup  
 When first launching Emacs, you will be presented with this:  
 ![Emacs start screen](images/emacs-start-screen.png)  
 Here one can start the `Emacs Tutorial`, view the `manual` or do various other things. All the links are clickable. But of course, we are not learning Emacs to just click on things, are we?
 
 To learn the basics of moving around in Emacs and also get some basic info about the multitude of aspects of Emacs, I will start by going through the tutorial. Whenever I started using Emacs, I always neglected the tutorial and dived head-first into using Emacs, not even learning the basics of moving around, because I always installed `evil` as soon as possible.
 
-This time, I will force myself through the whole tutorial and also, although stated differently earlier, I will not install `evil` from the get-go and stay with the built-in keybindings.
+This time, I will force myself through the whole tutorial and also, although stated differently earlier, I will not install `evil` from the get-go and stay with the built-in keybindings.  
 
 # Emacs Tutorial
-## Basic movement
+## Basic movement  
 - Move one screen down: `C-v`  
 - Move one screen up: `M-v`  
 
@@ -109,7 +107,6 @@ Emacs has a lot of commands. A lot of them do not come with a keybinding out-of-
 So the first type is invoked by a chain of keybindings, the latter by pressing `M-x` and typing out the command.  
 
 ## Cancel a (running) command  
-
 - Cancel a running or not yet invoked command: `C-g`  
 
 ## Mode line  
@@ -123,12 +120,12 @@ The 63% indicates the current position in the active file. It will say `Top` if 
 
 The `L` indicates the current line.
 
-## Major modes
+## Major modes  
 The part inside the parentheses indicates which major mode we are currently in. A major mode tells Emacs how to handle this specific buffer. Some examples are `Lisp mode`, `Text mode` or `Python mode`. All these just tell Emacs how to handle indentation, auto-completion and the like.  
 
 Only one major mode can be active at any given time. To view documentation on the current major mode, type `C-h m`.
 
-## Minor modes
+## Minor modes  
 Minor modes are specific 'nuances' of a major mode. There can be one, multiple or no minor modes at all at any given time.
 
 An example, which is given in the tutorial is `Auto Fill mode`. It makes Emacs break the line in between words when the maximum number of characters per line are crossed.  
@@ -136,10 +133,10 @@ An example, which is given in the tutorial is `Auto Fill mode`. It makes Emacs b
 ## Search  
 - Search forward: `C-s`  
 - Search backward: `C-r`  
+
 The typed word is searched and displayed on the fly.  
 
 ## (Multiple) frames  
-
 - Split horizontally: `C-x 2`  
 - Split vertically: `C-x 3`  
 
@@ -147,4 +144,7 @@ To scroll the other, non-active window: `C-M-v` and `C-M-S-v`, respectively.
 
 - Kill the currently active window: `C-x 0`  
 - Kill all other windows beside the active one: `C-x 1`  
-- Move cursor to next frame: `C-x o`
+- Move cursor to next frame: `C-x o`  
+
+# Side note  
+Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.  
