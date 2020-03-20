@@ -2,10 +2,7 @@
 Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.
 
 When first launching Emacs, you will be presented with this:  
-
-![](../../../Pictures/Screenshot from 2020-03-18 23-08-49.png)
-
-
+![Emacs start screen](images/emacs-start-screen.png)  
 Here one can start the `Emacs Tutorial`, view the `manual` or do various other things. All the links are clickable. But of course, we are not learning Emacs to just click on things, are we?
 
 To learn the basics of moving around in Emacs and also get some basic info about the multitude of aspects of Emacs, I will start by going through the tutorial. Whenever I started using Emacs, I always neglected the tutorial and dived head-first into using Emacs, not even learning the basics of moving around, because I always installed `evil` as soon as possible.
