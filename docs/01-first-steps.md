@@ -1,13 +1,12 @@
-# First startup  
+# Emacs tutorial  
 When first launching Emacs, you will be presented with this:  
 ![Emacs start screen](images/emacs-start-screen.png)  
-Here one can start the `Emacs Tutorial`, view the `manual` or do various other things. All the links are clickable. But of course, we are not learning Emacs to just click on things, are we?
+Here one can start the `Emacs Tutorial`, view the `Emacs Manual` or do various other things. All the links are clickable. But of course, we are not learning Emacs to just click on things, are we?
 
 To learn the basics of moving around in Emacs and also get some basic info about the multitude of aspects of Emacs, I will start by going through the tutorial. Whenever I started using Emacs, I always neglected the tutorial and dived head-first into using Emacs, not even learning the basics of moving around, because I always installed `evil` as soon as possible.
 
 This time, I will force myself through the whole tutorial and also, although stated differently earlier, I will not install `evil` from the get-go and stay with the built-in keybindings.  
 
-# Emacs Tutorial
 ## Basic movement  
 - Move one screen down: `C-v`  
 - Move one screen up: `M-v`  
@@ -146,5 +145,5 @@ To scroll the other, non-active window: `C-M-v` and `C-M-S-v`, respectively.
 - Kill all other windows beside the active one: `C-x 1`  
 - Move cursor to next frame: `C-x o`  
 
-# Side note  
+## Side note  
 Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.  
