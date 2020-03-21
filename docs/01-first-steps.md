@@ -135,7 +135,7 @@ An example, which is given in the tutorial is `Auto Fill mode`. It makes Emacs b
 
 The typed word is searched and displayed on the fly.  
 
-## (Multiple) frames  
+## (Multiple) windows  
 - Split horizontally: `C-x 2`  
 - Split vertically: `C-x 3`  
 
