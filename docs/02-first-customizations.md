@@ -20,7 +20,7 @@ So from now on I will assume that the reader's config is located at `~/.emacs.d/
 
 ## Intro to Lisp
 
-The whole init file is written in Emacs Lisp. So one is actually writing code to configure Emacs. Basically the syntax of an expression looks like this (this is the example the ![official Emacs documentation](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-Syntax.html#Init-Syntax) uses, which I highly recommend):
+The whole init file is written in Emacs Lisp. So one is actually writing code to configure Emacs. Basically the syntax of an expression looks like this (this is the example the [official Emacs documentation](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-Syntax.html#Init-Syntax) uses, which I highly recommend):
 
 `(setq fill-column 60)`  
 
