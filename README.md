@@ -36,3 +36,4 @@ A small note about the format of this documentation: I will eventually write and
 
 # Chapters  
 - ![First steps](docs/01-first-steps.md)
+- ![First customizations](docs/02-first-customizations.md)
