@@ -79,9 +79,9 @@ It calls the function `add-to-list` with the argument `'default-frame-alist` whi
 
 `add-to-list` goes through the whole list and, if the element is not yet set, will add it to the top of the list. Because of this it avoids duplicates but it also means when going through a big list the process will be expensive computation-wise. `'default-frame-alist` contains all the settings regarding the Emacs frames, e.g. height and width of the initial frame. 
 
----- RESEARCH
-![Difference between push and add-to-list](https://emacs.stackexchange.com/questions/7389/whats-the-difference-between-push-and-add-to-list/7392)
----- RESEARCH
+---- RESEARCH  
+[Difference between push and add-to-list](https://emacs.stackexchange.com/questions/7389/whats-the-difference-between-push-and-add-to-list/7392)
+---- RESEARCH  
 
 ### Line numbers
 
