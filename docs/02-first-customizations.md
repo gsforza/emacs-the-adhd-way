@@ -160,4 +160,4 @@ Emacs has a builtin auto-completion mode, `ido-mode`. This shows existing files 
 ```
 
 ## Side note
-There are other kind of init files which I will not focus in this chapter. You can read about them ![here](https://www.gnu.org/software/emacs/manual/html_node/eintr/Site_002dwide-Init.html).
+There are other kind of init files which I will not focus in this chapter. You can read about them [here](https://www.gnu.org/software/emacs/manual/html_node/eintr/Site_002dwide-Init.html).
