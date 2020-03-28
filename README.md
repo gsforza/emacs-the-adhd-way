@@ -1,3 +1,4 @@
+# Table of contents
 - [Learn Emacs the ADHD way](#learn-emacs-the-adhd-way)
   * [The constraints](#the-constraints)
     + [Using the Pomodoro technique](#using-the-pomodoro-technique)
