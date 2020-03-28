@@ -4,6 +4,9 @@
   * [The goal](#the-goal)
 - [Side note](#side-note)
 - [Chapters](#chapters)
+  * ![First steps](docs/01-first-steps.md)
+  * ![First customizations](docs/02-first-customizations.md)
+  * ![Package installation](docs/03-package-installation.md)
 
 # Learn Emacs the ADHD way  
 As a long-time vim user I always fantasized about having one place to do all my usual computing, note taking, email and task management. So naturally I have always been intrigued by Emacs and its capabilities: Org, the possibility of configuring my editor with an actual - and sane - (programming) language - opposed to the abomination that is `Vim script` - the community, the trillions of packages, just to name a few.  
@@ -37,3 +40,4 @@ A small note about the format of this documentation: I will eventually write and
 # Chapters  
 - ![First steps](docs/01-first-steps.md)
 - ![First customizations](docs/02-first-customizations.md)
+- ![Package installation](docs/03-package-installation.md)
