@@ -2,20 +2,20 @@ Table of contents
 =================
 
 -   [First customizations](#first-customizations)
-    -   [init.el](#initel)
-    -   [Intro to Lisp](#intro-to-lisp)
-    -   [Customizing Emacs](#customizing-emacs)
-        -   [Visual declutter](#visual-declutter)
-        -   [Startup screen](#startup-screen)
-        -   [Font](#font)
-        -   [Line numbers](#line-numbers)
-        -   [Show keystrokes faster](#show-keystrokes-faster)
-        -   [Disable audio](#disable-audio)
-        -   [Show matching parentheses](#show-matching-parentheses)
-        -   [Backups and autosaves](#backups-and-autosaves)
-        -   [Tabs are evil](#tabs-are-evil)
-        -   [y-or-n](#y-or-n)
-        -   [Auto-completion](#auto-completion)
+-   [init.el](#initel)
+-   [Intro to Lisp](#intro-to-lisp)
+-   [Customizing Emacs](#customizing-emacs)
+    -   [Visual declutter](#visual-declutter)
+    -   [Startup screen](#startup-screen)
+    -   [Font](#font)
+    -   [Line numbers](#line-numbers)
+    -   [Show keystrokes faster](#show-keystrokes-faster)
+    -   [Disable audio](#disable-audio)
+    -   [Show matching parentheses](#show-matching-parentheses)
+    -   [Backups and autosaves](#backups-and-autosaves)
+    -   [Tabs are evil](#tabs-are-evil)
+    -   [y-or-n](#y-or-n)
+    -   [Auto-completion](#auto-completion)
 -   [Side note](#side-note)
 -   [Research](#research)
 
@@ -27,7 +27,7 @@ a bare minimum. In addition to that, I want to research exactly what the
 changes do and how they change Emacs default behavior.
 
 init.el
--------
+=======
 
 When starting up, Emacs looks in specific places for its config file.
 These are:
@@ -53,7 +53,7 @@ So from now on I will assume that the reader\'s config is located at
 `~/.emacs.d/init.el`, where my own config resides.
 
 Intro to Lisp
--------------
+=============
 
 The whole init file is written in Emacs Lisp. So one is actually writing
 code to configure Emacs. Basically the syntax of an expression looks
@@ -86,9 +86,10 @@ After making everything a bit clearer, I hope, let\'s start customizing
 Emacs!
 
 Customizing Emacs
------------------
+=================
 
-### Visual declutter
+Visual declutter
+----------------
 
 First, I want to get rid of the scroll, menu and tool bar and I do not
 want the cursor to be blinking. Those actually are globally enabled
@@ -102,7 +103,8 @@ minor modes, so we do not use `setq`, we just disable them via:
 Notice that we are using `-1` instead of `nil`, because `nil` equals to
 no set and this in return means the modes will be still enabled.
 
-### Startup screen
+Startup screen
+--------------
 
 I do not want to see the splash screen every time I start Emacs, I want
 to see an empty `scratch buffer`. The scratch buffer always
@@ -116,7 +118,8 @@ startup message it always contains, add this to your `init.el`.
     (setq inhibit-startup-screen t
           initial-scratch-message "")
 
-### Font
+Font
+----
 
 I **really** like `IBM Plex Mono`. Feel free to use any other font (you
 should try `IBM Plex Mono`, though).
@@ -141,7 +144,8 @@ will be expensive computation-wise. `'default-frame-alist` contains all
 the settings regarding the Emacs frames, e.g. height and width of the
 initial frame.
 
-### Line numbers
+Line numbers
+------------
 
 Next I want line numbers to be displayed, but relatively to where the
 cursor currently is. To do this, I put this into my config:
@@ -152,14 +156,16 @@ cursor currently is. To do this, I put this into my config:
 This sets the variable `display-line-numbers-type` to `'relative`, which
 `global-display-line-numbers-mode` takes as an argument.
 
-### Show keystrokes faster
+Show keystrokes faster
+----------------------
 
 I want to change the time it takes for Emacs to show which keys I
 pressed. The default is set to 1 second. I want it to be instantaneous.
 
     (setq echo-keystrokes 0.1)
 
-### Disable audio
+Disable audio
+-------------
 
 I also want to disable the pesky ring bell, which Emacs uses to indicate
 an error made.
@@ -170,14 +176,16 @@ This will set the variable `ring-bell-function` to use the function
 `'ignore` which just does nothing and return `nil`.There is also the
 possibility to make Emacs flash the screen, but I want none of that.
 
-### Show matching parentheses
+Show matching parentheses
+-------------------------
 
 Showing matching parentheses makes coding easier. This activates the
 minor mode `show-paren-mode` globally.
 
     (show-paren-mode 1)
 
-### Backups and autosaves
+Backups and autosaves
+---------------------
 
 Emacs has the concept of backups and autosaves, which by default are
 more annoying than helpful to me.
@@ -198,14 +206,16 @@ directory `auto-save-list`.
     (setq auto-save-default nil)
     (setq auto-save-list-file-prefix nil)
 
-### Tabs are evil
+Tabs are evil
+-------------
 
 I want Emacs to insert spaces when indenting. Notice the `setq-default`
 to make this setting global.
 
     (setq-default indent-tabs-mode nil)
 
-### y-or-n
+y-or-n
+------
 
 Instead of wanting me to type out yes or no, I want to just use y or n.
 `fset` sets a new function definition for a symbol, in this case
@@ -213,7 +223,8 @@ Instead of wanting me to type out yes or no, I want to just use y or n.
 
     (fset 'yes-or-no-p 'y-or-n-p)
 
-### Auto-completion
+Auto-completion
+---------------
 
 Emacs has a builtin auto-completion mode, `ido-mode`. This shows
 existing files and buffers when searching for them with `C-x C-f` or
