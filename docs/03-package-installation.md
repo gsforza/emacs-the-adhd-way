@@ -2,13 +2,13 @@ Table of contents
 =================
 
 -   [Package installation](#package-installation)
-    -   [What is a package?](#what-is-a-package)
-    -   [Installing a package with
-        package.el](#installing-a-package-with-packageel)
-    -   [MELPA](#melpa)
-        -   [Using MELPA](#using-melpa)
-    -   [Installing packages
-        programmatically](#installing-packages-programmatically)
+-   [What is a package?](#what-is-a-package)
+-   [Installing a package with
+      package.el](#installing-a-package-with-packageel)
+-   [MELPA](#melpa)
+    -   [Using MELPA](#using-melpa)
+-   [Installing packages
+      programmatically](#installing-packages-programmatically)
 -   [use-package, straight.el, Borg, Quelpa, Cask,
     el-get](#use-package-straightel-borg-quelpa-cask-el-get)
 
@@ -23,7 +23,7 @@ let\'s start with the definition of a package and the default way of
 installing one.
 
 What is a package?
-------------------
+==================
 
 A package is nothing but one or multiple Elisp files which extend or
 change the functionality of Emacs.
@@ -40,7 +40,7 @@ the package\'s content directory, i.e. where Emacs stores the Elisp
 file(s) which form the package.
 
 Installing a package with package.el
-------------------------------------
+====================================
 
 Let\'s say we want to install the `ace-window` package, which makes it
 easier to navigate between multiple windows. By typing
@@ -163,7 +163,7 @@ tell Emacs where to find them.
     (load custom-file)
 
 MELPA
------
+=====
 
 The `ELPA` might be the official archive, but the number of packages in
 it are pretty limited and, most of the time, the packages themselves are
@@ -178,7 +178,8 @@ It is not officially supported by the GNU project, but it is curated and
 one can be sure that the packages do not contain malicious code. Still,
 you should still take care when installing a lesser-known package!
 
-### Using MELPA
+Using MELPA
+-----------
 
 In order to use `MELPA`, you need to put the following code block into
 your config file:
@@ -218,7 +219,7 @@ entries you have to refresh the package list via
 `M-x package-refresh-contents`.
 
 Installing packages programmatically
-------------------------------------
+====================================
 
 Like stated before there is another option to install packages other
 than using `M-x list-packages`. To install e.g. `which-key`, a package
