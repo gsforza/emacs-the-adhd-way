@@ -1,149 +1,231 @@
-# Emacs tutorial  
-When first launching Emacs, you will be presented with this:  
-![Emacs start screen](images/emacs-start-screen.png)  
-Here one can start the `Emacs Tutorial`, view the `Emacs Manual` or do various other things. All the links are clickable. But of course, we are not learning Emacs to just click on things, are we?
+Table of contents
+=================
 
-To learn the basics of moving around in Emacs and also get some basic info about the multitude of aspects of Emacs, I will start by going through the tutorial. Whenever I started using Emacs, I always neglected the tutorial and dived head-first into using Emacs, not even learning the basics of moving around, because I always installed `evil` as soon as possible.
+-   [Emacs tutorial](#emacs-tutorial)
+    -   [Basic movement](#basic-movement)
+    -   [Delete, kill, yank and mark](#delete-kill-yank-and-mark)
+    -   [Buffers](#buffers)
+    -   [eXtended commands](#extended-commands)
+    -   [Cancel a (running) command](#cancel-a-running-command)
+    -   [Mode line](#mode-line)
+    -   [Major modes](#major-modes)
+    -   [Minor modes](#minor-modes)
+    -   [Search](#search)
+    -   [(Multiple) windows](#multiple-windows)
+-   [Side note](#side-note)
 
-This time, I will force myself through the whole tutorial and also, although stated differently earlier, I will not install `evil` from the get-go and stay with the built-in keybindings.  
+Emacs tutorial
+==============
 
-## Basic movement  
-- Move one screen down: `C-v`  
-- Move one screen up: `M-v`  
+When first launching Emacs, you will be presented with this:\
+![Emacs start screen](images/emacs-start-screen.png)\
+Here one can start the `Emacs Tutorial`, view the `Emacs Manual` or do
+various other things. All the links are clickable. But of course, we are
+not learning Emacs to just click on things, are we?
 
-This is also the default 'motion' when going down the last visible line in the current frame. This will be one setting I will change as soon as possible. I do not like the jumpiness. I want the lines to scroll smoothly.  
+To learn the basics of moving around in Emacs and also get some basic
+info about the multitude of aspects of Emacs, I will start by going
+through the tutorial. Whenever I started using Emacs, I always neglected
+the tutorial and dived head-first into using Emacs, not even learning
+the basics of moving around, because I always installed `evil` as soon
+as possible.
 
-- Move text under cursor: `C-l`  
+This time, I will force myself through the whole tutorial and also,
+although stated differently earlier, I will not install `evil` from the
+get-go and stay with the built-in keybindings.
 
-This will move the text to the top, bottom and center of the screen, respectively. This mainly helps 'refocusing' the window when moving up and down with `C-v` and `M-v`.  
+Basic movement
+--------------
 
-- Move cursor one character **forward**: `C-f`  
-- Move cursor one character **backward**: `C-b`  
-- Move cursor one line up (go to **previous** line): `C-p`  
-- Move cursor one line down (go to **next** line): `C-n`  
+-   Move one screen down: `C-v`
+-   Move one screen up: `M-v`
 
-Basic movement, indeed.  
+This is also the default \'motion\' when going down the last visible
+line in the current frame. This will be one setting I will change as
+soon as possible. I do not like the jumpiness. I want the lines to
+scroll smoothly.
 
-- Move cursor one word **forward**: `M-f`  
-- Move cursor one word **backward**: `M-b`  
+-   Move text under cursor: `C-l`
 
-This is my default way of moving around inside a file, besides 'movement by search'.    
+This will move the text to the top, bottom and center of the screen,
+respectively. This mainly helps \'refocusing\' the window when moving up
+and down with `C-v` and `M-v`.
 
-- Move cursor to beginning of line (German: **Anfang**): `C-a`  
-- Move cursor to end of line (German: **Ende**): `C-e`  
+-   Move cursor one character **forward**: `C-f`
+-   Move cursor one character **backward**: `C-b`
+-   Move cursor one line up (go to **previous** line): `C-p`
+-   Move cursor one line down (go to **next** line): `C-n`
 
-I knew those from the shell.  
+Basic movement, indeed.
 
-- Move cursor to beginning of sentence (**Anfang**): `M-a`  
-- Move cursor to end of sentence (**Ende**): `M-e`  
+-   Move cursor one word **forward**: `M-f`
+-   Move cursor one word **backward**: `M-b`
 
-The location of the cursor in the text is also called 'point'. I'll try to use this term from now on.  
+This is my default way of moving around inside a file, besides
+\'movement by search\'.
 
-- Go to beginning of file: `M-<`  
-- Go to end of file: `M->`  
+-   Move cursor to beginning of line (German: **Anfang**): `C-a`
+-   Move cursor to end of line (German: **Ende**): `C-e`
 
-## Delete, kill, yank and mark  
-In Emacs, there is a difference between `kill` and `delete`. The former erases the line/string/character, but makes it `yankable`, which means it can be pasted again. This is a bit confusing for vim users, because `yank` means copy here, not paste.  
+I knew those from the shell.
 
-- Delete character before cursor: `<DEL>`  
-- Delete next character after cursor: `C-d`  
+-   Move cursor to beginning of sentence (**Anfang**): `M-a`
+-   Move cursor to end of sentence (**Ende**): `M-e`
 
-Those will make the deleted characters not `yankable`.  
+The location of the cursor in the text is also called \'point\'. I\'ll
+try to use this term from now on.
 
-- Kill word before the cursor: `M-<DEL>`  
-- Kill word after the cursor: `M-d`  
-- Kill from the cursor position to end of line: `C-k`  
-- Kill to end of current sentence: `M-k`  
+-   Go to beginning of file: `M-<`
+-   Go to end of file: `M->`
 
-Those make the deleted lines/string `yankable`.  
+Delete, kill, yank and mark
+---------------------------
 
-- Mark lines and press `M-w`  
+In Emacs, there is a difference between `kill` and `delete`. The former
+erases the line/string/character, but makes it `yankable`, which means
+it can be pasted again. This is a bit confusing for vim users, because
+`yank` means copy here, not paste.
 
-Copy/kill without actually killing.  
+-   Delete character before cursor: `<DEL>`
+-   Delete next character after cursor: `C-d`
 
-- Yank last killed characters: `C-y`  
-- Press `C-y` and then cycle with `M-y`.  
+Those will make the deleted characters not `yankable`.
 
-To cycle through the killed characters/lines  
+-   Kill word before the cursor: `M-<DEL>`
+-   Kill word after the cursor: `M-d`
+-   Kill from the cursor position to end of line: `C-k`
+-   Kill to end of current sentence: `M-k`
 
-- Visually mark lines: `C-<SPC>`  
+Those make the deleted lines/string `yankable`.
 
-Mark to kill.  
+-   Mark lines and press `M-w`
 
-- Undo: `C-/`  
+Copy/kill without actually killing.
 
-This is also a setting which needs configuring.  
+-   Yank last killed characters: `C-y`
+-   Press `C-y` and then cycle with `M-y`.
 
-## Buffers
-When opening a file inside Emacs, it creates a buffer for this file. This buffer stays open until Emacs gets closed or the buffer itself gets killed. This makes it easy to jump between different files, even when the file itself got 'closed'.  
+To cycle through the killed characters/lines
 
-- Save current file: `C-x C-s`  
-- Find file (open for editing): `C-x C-f`  
+-   Visually mark lines: `C-<SPC>`
 
-This will open the chosen file inside a new buffer.  
+Mark to kill.
 
-- Show all open buffers: `C-x C-b`  
+-   Undo: `C-/`
 
-One can select one of the buffers and press Enter to open this buffer.  
+This is also a setting which needs configuring.
 
-- Switch to buffer: `C-x b`  
+Buffers
+-------
 
-With this one can start typing the buffer name and use <TAB> for auto-completion.  
+When opening a file inside Emacs, it creates a buffer for this file.
+This buffer stays open until Emacs gets closed or the buffer itself gets
+killed. This makes it easy to jump between different files, even when
+the file itself got \'closed\'.
 
-There are also special buffers:  
+-   Save current file: `C-x C-s`
+-   Find file (open for editing): `C-x C-f`
 
-- `*Buffer List*`, which contains the buffer list, obviously  
-- `*Messages*`, contains the messages that have appeared on the bottom line during your Emacs session  
+This will open the chosen file inside a new buffer.
 
-To save the edited files inside a buffer, one can type `C-x s`, which asks you about each buffer that need saving. 
+-   Show all open buffers: `C-x C-b`
 
-## eXtended commands
-Emacs has a lot of commands. A lot of them do not come with a keybinding out-of-the-box. So there are two ways of invoking these commands:  
+One can select one of the buffers and press Enter to open this buffer.
 
-- `C-x` **Character eXtend**: Followed by one character  
-- `M-x` **Named command eXtend**: Followed by a long name  
+-   Switch to buffer: `C-x b`
 
-So the first type is invoked by a chain of keybindings, the latter by pressing `M-x` and typing out the command.  
+With this one can start typing the buffer name and use <TAB> for
+auto-completion.
 
-## Cancel a (running) command  
-- Cancel a running or not yet invoked command: `C-g`  
+There are also special buffers:
 
-## Mode line  
-The line immediately above the echo area is called the "mode line". The mode line says something like this:
+-   `*Buffer List*`, which contains the buffer list, obviously
+-   `*Messages*`, contains the messages that have appeared on the bottom
+    line during your Emacs session
 
-` -:**-  TUTORIAL       63% L749    (Fundamental) `  
+To save the edited files inside a buffer, one can type `C-x s`, which
+asks you about each buffer that need saving.
 
-This indicates if the current file has unsaved changes `**-`; this will be all dashes if it has not. The next part is the name of the currently active file, in this case it is `TUTORIAL`.  
+eXtended commands
+-----------------
 
-The 63% indicates the current position in the active file. It will say `Top` if the top of the file is seen in the buffer and will say `Bot` if the opposite is the case. If the buffer is so small that the whole content fits one screen, it will say `All`.  
+Emacs has a lot of commands. A lot of them do not come with a keybinding
+out-of-the-box. So there are two ways of invoking these commands:
+
+-   `C-x` **Character eXtend**: Followed by one character
+-   `M-x` **Named command eXtend**: Followed by a long name
+
+So the first type is invoked by a chain of keybindings, the latter by
+pressing `M-x` and typing out the command.
+
+Cancel a (running) command
+--------------------------
+
+-   Cancel a running or not yet invoked command: `C-g`
+
+Mode line
+---------
+
+The line immediately above the echo area is called the \"mode line\".
+The mode line says something like this:
+
+`-:**-  TUTORIAL       63% L749    (Fundamental)`
+
+This indicates if the current file has unsaved changes `**-`; this will
+be all dashes if it has not. The next part is the name of the currently
+active file, in this case it is `TUTORIAL`.
+
+The 63% indicates the current position in the active file. It will say
+`Top` if the top of the file is seen in the buffer and will say `Bot` if
+the opposite is the case. If the buffer is so small that the whole
+content fits one screen, it will say `All`.
 
 The `L` indicates the current line.
 
-## Major modes  
-The part inside the parentheses indicates which major mode we are currently in. A major mode tells Emacs how to handle this specific buffer. Some examples are `Lisp mode`, `Text mode` or `Python mode`. All these just tell Emacs how to handle indentation, auto-completion and the like.  
+Major modes
+-----------
 
-Only one major mode can be active at any given time. To view documentation on the current major mode, type `C-h m`.
+The part inside the parentheses indicates which major mode we are
+currently in. A major mode tells Emacs how to handle this specific
+buffer. Some examples are `Lisp mode`, `Text mode` or `Python mode`. All
+these just tell Emacs how to handle indentation, auto-completion and the
+like.
 
-## Minor modes  
-Minor modes are specific 'nuances' of a major mode. There can be one, multiple or no minor modes at all at any given time.
+Only one major mode can be active at any given time. To view
+documentation on the current major mode, type `C-h m`.
 
-An example, which is given in the tutorial is `Auto Fill mode`. It makes Emacs break the line in between words when the maximum number of characters per line are crossed.  
+Minor modes
+-----------
 
-## Search  
-- Search forward: `C-s`  
-- Search backward: `C-r`  
+Minor modes are specific \'nuances\' of a major mode. There can be one,
+multiple or no minor modes at all at any given time.
 
-The typed word is searched and displayed on the fly.  
+An example, which is given in the tutorial is `Auto Fill mode`. It makes
+Emacs break the line in between words when the maximum number of
+characters per line are crossed.
 
-## (Multiple) windows  
-- Split horizontally: `C-x 2`  
-- Split vertically: `C-x 3`  
+Search
+------
 
-To scroll the other, non-active window: `C-M-v` and `C-M-S-v`, respectively.  
+-   Search forward: `C-s`
+-   Search backward: `C-r`
 
-- Kill the currently active window: `C-x 0`  
-- Kill all other windows beside the active one: `C-x 1`  
-- Move cursor to next frame: `C-x o`  
+The typed word is searched and displayed on the fly.
 
-## Side note  
-Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.  
+(Multiple) windows
+------------------
+
+-   Split horizontally: `C-x 2`
+-   Split vertically: `C-x 3`
+
+To scroll the other, non-active window: `C-M-v` and `C-M-S-v`,
+respectively.
+
+-   Kill the currently active window: `C-x 0`
+-   Kill all other windows beside the active one: `C-x 1`
+-   Move cursor to next frame: `C-x o`
+
+Side note
+=========
+
+Just for reference, I am using Emacs 26.3 on Fedora 31 Workstation.
