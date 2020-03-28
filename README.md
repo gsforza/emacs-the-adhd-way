@@ -2,11 +2,11 @@
   * [The constraints](#the-constraints)
     + [Using the Pomodoro technique](#using-the-pomodoro-technique)
   * [The goal](#the-goal)
-- [Side note](#side-note)
 - [Chapters](#chapters)
   * ![First steps](docs/01-first-steps.md)
   * ![First customizations](docs/02-first-customizations.md)
   * ![Package installation](docs/03-package-installation.md)
+- [Side note](#side-note)
 
 # Learn Emacs the ADHD way  
 As a long-time vim user I always fantasized about having one place to do all my usual computing, note taking, email and task management. So naturally I have always been intrigued by Emacs and its capabilities: Org, the possibility of configuring my editor with an actual - and sane - (programming) language - opposed to the abomination that is `Vim script` - the community, the trillions of packages, just to name a few.  
@@ -34,10 +34,10 @@ After finishing four "pomodoros" I will stop searching and use the best solution
 ## The goal  
 Other than learning Emacs, I hope to learn coping with my ADHD and possibly encourage others - with or without the condition - to try this way of gradual and controlled learning. And, of course, I am hoping to spur some kind of discussion about learning, working and living with ADHD and all its aspects.  
 
-## Side note  
-A small note about the format of this documentation: I will eventually write and structure all this inside an Org file, but to actually stay on track and not go down the first rabbit hole before really having started I am initially writing all this in a plain markdown file.  
-
 # Chapters  
 - ![First steps](docs/01-first-steps.md)
 - ![First customizations](docs/02-first-customizations.md)
 - ![Package installation](docs/03-package-installation.md)
+
+# Side note  
+A small note about the format of this documentation: I will eventually write and structure all this inside an Org file, but to actually stay on track and not go down the first rabbit hole before really having started I am initially writing all this in a plain markdown file.  
