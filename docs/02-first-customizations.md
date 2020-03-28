@@ -79,10 +79,6 @@ It calls the function `add-to-list` with the argument `'default-frame-alist` whi
 
 `add-to-list` goes through the whole list and, if the element is not yet set, will add it to the top of the list. Because of this it avoids duplicates but it also means when going through a big list the process will be expensive computation-wise. `'default-frame-alist` contains all the settings regarding the Emacs frames, e.g. height and width of the initial frame. 
 
----- RESEARCH  
-[Difference between push and add-to-list](https://emacs.stackexchange.com/questions/7389/whats-the-difference-between-push-and-add-to-list/7392)
----- RESEARCH  
-
 ### Line numbers
 
 Next I want line numbers to be displayed, but relatively to where the cursor currently is. To do this, I put this into my config:
@@ -159,5 +155,12 @@ Emacs has a builtin auto-completion mode, `ido-mode`. This shows existing files 
 (ido-mode 1)
 ```
 
-## Side note
-There are other kind of init files which I will not focus in this chapter. You can read about them [here](https://www.gnu.org/software/emacs/manual/html_node/eintr/Site_002dwide-Init.html).
+## Side note  
+
+There are other kind of init files which I will not focus in this chapter. You can read about them [here](https://www.gnu.org/software/emacs/manual/html_node/eintr/Site_002dwide-Init.html).  
+
+Also, in the future I will list all topics I want to research for the chapter here.
+
+### Research  
+
+![Difference between push and add-to-list](https://emacs.stackexchange.com/questions/7389/whats-the-difference-between-push-and-add-to-list/7392)
