@@ -9,6 +9,7 @@ Table of contents
     -   ![First steps](docs/01-first-steps.md)
     -   ![First customizations](docs/02-first-customizations.md)
     -   ![Package installation](docs/03-package-installation.md)
+    -   ![On using documentation](docs/04-using-documentation.md)
 -   [Side note](#side-note)
 
 Learn Emacs the ADHD way
@@ -95,6 +96,7 @@ Chapters
 -   ![First steps](docs/01-first-steps.md)
 -   ![First customizations](docs/02-first-customizations.md)
 -   ![Package installation](docs/03-package-installation.md)
+-   ![On using documentation](docs/04-using-documentation.md)
 
 Side note
 =========
