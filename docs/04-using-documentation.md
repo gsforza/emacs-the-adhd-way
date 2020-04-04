@@ -10,7 +10,7 @@ Table of contents
 On using documentation
 ======================
 
-Emacs calls itself an \'extenslibe, self-documenting\' editor. I guess
+Emacs calls itself an \'extensible, self-documenting\' editor. I guess
 at this point we figured out why it calls itself extensible but I did
 not talk that much about the \'self-documenting\' part. Shamefully so,
 because the documentation and manuals provided with, and even accessible
@@ -38,7 +38,7 @@ a link (manual topic) to follow it. To get back to the parent topic you
 can press `o`. To go to the last shown page press `l`.
 
 But, of course, this is not the fancy \'self-documenting\'
-functionallity I am talking about. There is so much more!
+functionality I am talking about. There is so much more!
 
 Looking up variables, functions, symbols and much more
 ======================================================
@@ -64,7 +64,7 @@ On the contrary, there is `C-h c` which shows you the command invoked by
 the given key sequence of which you get the full documentation of when
 using `C-h k`.
 
-If you want to know more about a specifc package, is it builtin or
+If you want to know more about a specific package, is it builtin or
 external, you can search for it with `C-h i` which brings you to the
 documentation browser. In here you can find documentation on all the
 packages, Emacs basics, and much more. Also, whenever you install a
@@ -87,7 +87,7 @@ But what if you don\'t actually know what you are looking for? What if
 you can only describe what you want? There is a command for that:
 `Apropos`.
 
-With `M-x apropos` you have a full-text search at your proposol to
+With `M-x apropos` you have a full-text search at your disposal to
 search for words, lists of words or even regular expressions. It will
 find any (interactive) function or variable matching your search query
 and will show you a list of all matches in a new buffer - which is in
@@ -124,7 +124,7 @@ modes or set a variable just in this mode.
 
 This might not be that helpful in `Apropos`, but there are also hooks
 for e.g. `prog-mode`, a specific mode that activates whenever Emacs
-opens a \'programing buffer\'. Here I for example start `hl-line-mode`,
+opens a \'programming buffer\'. Here I for example start `hl-line-mode`,
 which highlights the current line and `display-line-numbers-mode`, which
 shows the current line number and all the other lines relatively to it.
 I also want Emacs to show matching parentheses when point is near it. I
