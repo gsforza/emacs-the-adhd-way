@@ -17,10 +17,7 @@ Learn Emacs the ADHD way
 As a long-time vim user I always fantasized about having one place to do
 all my usual computing, note taking, email and task management. So
 naturally I have always been intrigued by Emacs and its capabilities:
-Org, the possibility of configuring my editor with an actual - and sane
-- (programming) language - opposed to the abomination that is
-`Vim script` - the community, the trillions of packages, just to name a
-few.
+Org, the possibility of configuring my editor with an actual - and sane - (programming) language - opposed to the abomination that is `Vim script` - the community, the trillions of packages, just to name a few.
 
 The things that always held me back were the completely different key
 bindings, the necessity of learning Lisp at some point and the time of
