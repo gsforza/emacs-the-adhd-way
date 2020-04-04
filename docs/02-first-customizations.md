@@ -6,13 +6,13 @@ Table of contents
 -   [Intro to Lisp](#intro-to-lisp)
 -   [Customizing Emacs](#customizing-emacs)
     -   [Visual declutter](#visual-declutter)
-    -   [Startup screen](#startup-screen)
+    -   [Start-up screen](#startup-screen)
     -   [Font](#font)
     -   [Line numbers](#line-numbers)
     -   [Show keystrokes faster](#show-keystrokes-faster)
     -   [Disable audio](#disable-audio)
     -   [Show matching parentheses](#show-matching-parentheses)
-    -   [Backups and autosaves](#backups-and-autosaves)
+    -   [Backups and auto-saves](#backups-and-autosaves)
     -   [Tabs are evil](#tabs-are-evil)
     -   [y-or-n](#y-or-n)
     -   [Auto-completion](#auto-completion)
@@ -103,7 +103,7 @@ minor modes, so we do not use `setq`, we just disable them via:
 Notice that we are using `-1` instead of `nil`, because `nil` equals to
 no set and this in return means the modes will be still enabled.
 
-Startup screen
+Start-up screen
 --------------
 
 I do not want to see the splash screen every time I start Emacs, I want
@@ -184,10 +184,10 @@ minor mode `show-paren-mode` globally.
 
     (show-paren-mode 1)
 
-Backups and autosaves
+Backups and auto-saves
 ---------------------
 
-Emacs has the concept of backups and autosaves, which by default are
+Emacs has the concept of backups and auto-saves, which by default are
 more annoying than helpful to me.
 
 Backups are being created when the currently active file is saved for
@@ -198,7 +198,7 @@ The problem with this functionality is that the backup itself never gets
 deleted. So in the end, you have those backups lying all over the place.
 So I want to turn that off.
 
-Also, Emacs creates autosaves when editing a file. Again, I do not like
+Also, Emacs creates auto-saves when editing a file. Again, I do not like
 that behavior. The last line of code hinders Emacs to create the
 directory `auto-save-list`.
 

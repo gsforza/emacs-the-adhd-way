@@ -109,7 +109,7 @@ The directory also contains `ace-window-autoloads.el` and
 `ace-window-pkg.el`. The `autoloads` feature is a really nifty thing, in
 my opinion. What it does is it tells Emacs about the functions (or
 macros) of the installed package and the file(s) where they actually
-reside in. This greatly enhances the startup of Emacs because it does
+reside in. This greatly enhances the start-up of Emacs because it does
 not load the files until they are needed to actually provide the
 functions they contain.
 
@@ -147,7 +147,7 @@ will be the following code blocks in your config file:
      ;; If there is more than one, they won't work right.
      )
 
-At startup, after loading the init file, the `(package-initialize)`
+At start-up, after loading the init file, the `(package-initialize)`
 function initializes Emacs\' internal record of installed packages, and
 loads their `autoloads` - if they are in the `package-load-list` - which
 by default every installed package is.
@@ -208,7 +208,7 @@ going to fully explain what the code exactly does and - of course - this
 is not mandatory if you are not on a Windows system or are planning to
 use your config on one.
 
-The `add-to-list` part adds the `MELPA` url to the `'package-archives`
+The `add-to-list` part adds the `MELPA` URL to the `'package-archives`
 `alist`.
 
 After that, the package record will be initialized.
@@ -224,7 +224,7 @@ Installing packages programmatically
 Like stated before there is another option to install packages other
 than using `M-x list-packages`. To install e.g. `which-key`, a package
 which \'displays the key bindings following your currently entered
-incomplete command (a prefix) in a popup\' - [as the developer describes
+incomplete command (a prefix) in a pop-up\' - [as the developer describes
 it](https://github.com/justbur/emacs-which-key) - I put the following
 code into my config:
 
